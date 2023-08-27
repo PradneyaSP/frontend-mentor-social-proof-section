@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  margin: 6rem 15% 0 15%;
+}
+
+@media (max-width: 1200px) {
+  main {
+    margin: 6rem 10% 0 10%;
+  }
+}
+
+@media (max-width: 1056px) {
+  main {
+    margin: 4rem 5% 0 5%;
+  }
+}
+
+@media(max-width: 900px){
+  main {
+    margin: 4rem 5%;
+  }
+}
+
+/* Setting the background */
+.background {
+  position: absolute;
+  z-index: -1;
+  background-size: contain;
+}
+
+@media(max-width: 600px){
+  .background{
+    width: 250px;
+  }
+}
+
+.top {
+  left: 0;
+  top: 0;
+}
+
+.bottom {
+  right: 0;
+  bottom: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.text {
+  flex-basis: 40%;
+}
+
+.heading {
+  color: hsl(300, 43%, 22%);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.content {
+  color: hsl(303, 10%, 53%);
+  padding: 2rem 0;
+  font-size: 1.3rem;
+}
+
+.ratings {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 3.2rem);
+  row-gap: 1rem;
+}
+
+.star {
+  grid-column: span 8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 5px;
+  color: hsl(300, 43%, 22%);
+  font-weight: 600;
+}
+
+@media(max-width: 900px){
+
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .star{
+    display: block;
+    flex-basis: 3rem;
+    padding: 0.5rem 10%;
+    width: 60%;
+  }
+
+  .star-icon{
+    padding-bottom: 0.5rem;
+  }
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+  column-gap: 2rem;
+}
+
+.review-item {
+  grid-row: span 13;
+  background: hsl(300, 43%, 22%);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  .review-item {
+    width: 70%;
+  }
+}
+
+.pic {
+  border-radius: 50%;
+  height: 2rem;
+}
+
+.profile {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.name {
+  color: hsl(0, 0%, 100%);
+}
+
+.name > div {
+  color: hsl(333, 80%, 67%);
+  font-size: 0.9rem;
+  padding-top: 5px;
+}
+
+.review-text {
+  color: hsl(0, 0%, 100%);
+}
